@@ -11,15 +11,10 @@ public class PaymentService {
     }
 
     public boolean processUPI(String upiId, double amount) {
-        // Old logic
-        if(upiId == null || !upiId.contains("@")) {
+        // Updated logic
+        if(upiId == null || !upiId.endsWith("@upi")) {  // <-- Changed condition
             return false;
         }
-        return true; // Assume payment succeeds
+        return true;
     }
 }
-
-
-access token-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
-
-new token -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
